@@ -81,8 +81,8 @@ function Header() {
               className="min-w-4"
               placeholder="# of pages"
             >
-              {[...Array(100)].map((_, i) => (
-                <SearchSelectItem key={i} value={(i + 1).toString()}>
+              {[...Array(100)].map((item, i) => (
+                <SearchSelectItem key={item + i} value={(i + 1).toString()}>
                   {(i + 1).toString()} pages
                 </SearchSelectItem>
               ))}
