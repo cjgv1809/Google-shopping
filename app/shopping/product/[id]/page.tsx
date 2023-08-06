@@ -17,7 +17,7 @@ async function ProductPage({ params: { id } }: Props) {
   const productData = (await response.json()) as ProductData;
 
   if (!productData.content.pricing) {
-    return notFound();
+    notFound();
   }
 
   return (
@@ -67,7 +67,7 @@ async function ProductPage({ params: { id } }: Props) {
             />
           </div>
 
-          <div className="flex space-x-6 overflow-x-auto py-2 md:w-[30rem]">
+          <div className="flex space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-100 py-2 md:w-[30rem]">
             {productData.content.images?.full_size.slice(3).map((image, i) => (
               <img
                 key={image.toString() + i}

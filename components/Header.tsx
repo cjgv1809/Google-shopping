@@ -68,6 +68,7 @@ function Header() {
                 name="searchTerm"
                 placeholder="Search..."
                 className="outline-none flex-1"
+                autoFocus
               />
             </div>
 
